@@ -1,1 +1,1 @@
-# comp_229
+It is a simple READ.ME that will include all the necessary information and instructions of the upcoming project.
