@@ -1,1 +1,1 @@
-It is a simple READ.ME that will include all the necessary information and instructions of the upcoming project..
+It is a simple READ.ME that will include all the necessary information and instructions of the Week1 project.
