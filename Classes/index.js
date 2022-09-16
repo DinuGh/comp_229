@@ -6,6 +6,7 @@ class Vehicle {
         return '(' + this.wheels + ')';
     }
 }
+
 class Car extends Vehicle {
     constructor(color) {
         super(4);
@@ -15,7 +16,9 @@ class Car extends Vehicle {
         return super.toString() + ' colored: ' + this.color;
     }
 }
+
 var car = new Car('blue');
-car.toString();
+console.log(car.toString());
+
 console.log(car instanceof Car);
 console.log(car instanceof Vehicle);
