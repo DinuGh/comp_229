@@ -1,0 +1,29 @@
+{
+  "name": "comp_229_a01",
+  "version": "1.0.0",
+  "description": "COMP229.018 Code Example",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DinuGh/comp_229_a01.git"
+  },
+  "keywords": [
+    "COMP229",
+    "MEAN",
+    "Web",
+    "App",
+    "JavaScript"
+  ],
+  "author": "Dinu Gherciu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DinuGh/comp_229_a01/issues"
+  },
+  "homepage": "https://github.com/DinuGh/comp_229_a01#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
