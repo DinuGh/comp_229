@@ -6,4 +6,10 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/dinu', function(req, res, next) {
+  res.render('index', { title: 'Dinu' });
+});
+
 module.exports = router;
+
+//Run "nodemon" and access this URL: http://localhost:3000/dinu
