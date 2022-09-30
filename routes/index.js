@@ -13,3 +13,5 @@ router.get('/dinu', function(req, res, next) {
 module.exports = router;
 
 //Run "nodemon" and access this URL: http://localhost:3000/dinu
+
+//npmjs.com to take fonts
