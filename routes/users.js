@@ -10,4 +10,16 @@ router.get('/dinu', function(req, res, next) {
   res.send('Welcome Dinu!');
 });
 
+
+// /* GET users listing. */
+// router.get('/', function(req, res, next) {
+//   res.send('respond with a resource');
+// });
+
+// router.get('/me', function(req, res, next) {
+//   res.send('Welcome Julio!');
+// });
+
+
+
 module.exports = router;
