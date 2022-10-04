@@ -1,0 +1,78 @@
+<% include partials/header.ejs %>
+
+
+<body>
+  <!-- Main Nav  -->
+  <div class="w3-row">
+    <div class="w3-half w3-black w3-container w3-center" style="height:100%">
+      <div class="w3-padding-64">
+        <!-- Brand/logo -->
+        <h1><a href="/">
+            <img src="/images/image_logo.png" alt="logo" style="width:200px;height:200px;" title="qa logo" />
+          </a>
+        </h1>
+        <h2 style="font-family: 'Times New Roman', serif;">Hi, I'm Dinu and I like to DESTROY
+        </h2>
+        <h5 style="font-family: 'Times New Roman', serif;">but I also love creating</h5>
+      </div>
+      <div class="w3-padding-31">
+        <% if (title=="Home" ){ %>
+          <a class="nav-item active">
+              <% } else { %>
+                  <a class="nav-item">
+                      <% } %>
+                          <a href="/" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16">Home</a>
+      <% if (title=="About Me" ){ %>
+          <a class="nav-item active">
+              <% } else { %>
+                  <a class="nav-item">
+                      <% } %>
+                          <a href="/about" class="w3-button w3-black w3-block w3-hover-blue-violet w3-padding-16">About Me</a>
+      <% if (title=="Projects" ){ %>
+          <a class="nav-item active">
+              <% } else { %>
+                  <a class="nav-item">
+                      <% } %>
+                          <a href="/projects" class="w3-button w3-black w3-block w3-hover-teal w3-padding-16">Projects</a>
+      <% if (title=="Services" ){ %>
+          <a class="nav-item active">
+              <% } else { %>
+                  <a class="nav-item">
+                      <% } %>
+                          <a href="/services" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">Services</a>
+      <% if (title=="Contacts" ){ %>
+          <a class="nav-item active">
+              <% } else { %>
+                  <a class="nav-item">
+                      <% } %>
+                          <a href="/contacts" class="w3-button w3-black w3-block w3-hover-brown w3-padding-16">Contacts</a>
+      </div>
+    </div>
+
+    <div class="w3-half w3-blue-grey w3-container" style="height:100%">
+      <div class="w3-padding-64 w3-center">
+        <h1>
+          <img src="/images/1655909791675.png" alt="Dinu Gherciu" style="height:230px; width:100%">
+        </h1>
+        <br>
+        </br>
+        <div class="w3-left-align w3-padding-large">
+          <p style=" font-size: 20.6px; font-family: 'Times New Roman', serif;">
+            &nbsp; "QA that's what you need" is a software testing company that offers quality assurance, quality
+            control and software testing services based on the world’s best practices, standards, and solid expertise
+            received from the experience of working with high our customers.
+          </p>
+          <p style=" font-size: 20.7px; font-family: 'Times New Roman', serif;">
+            &nbsp; I'm ready to deliver detailed reports and other test documentation corresponding the highest
+            international standards compiled during the work at your project, as well as to automate the testing
+            processes if needed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+<footer class="w3-container w3-dark-grey w3-padding-8">
+  <p>Powered by <a href="https://www.centennialcollege.ca/" target="_blank">Centennial College</a></p>
+</footer>
+</body>
+</html>

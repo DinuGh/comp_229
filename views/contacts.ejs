@@ -1,0 +1,43 @@
+<% include partials/navigation.ejs %>
+
+    <div class="w3-padding-64">
+        <div class="w3-half w3-grey w3-container" style="height:100%; width:100%">
+            <div class="w3-center">
+                <h1 class="w3-wide w3-center">Contacts</h1>
+                <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
+                <div class="w3-row w3-padding-32">
+                    <div class="w3-col m6 w3-large w3-margin-bottom">
+                        <div class="w3-display-container">
+                            <img src="/images/map.png" class="round" style="width:55%">
+                            <style>
+                                img.round {
+                                    border-radius: 20px;
+                                    padding: 5px;
+                                }
+                            </style>
+                        </div>
+                        <i class="fa fa-map-marker" style="width:30px"></i> 1 Hall Ave, Toronto, CA<br>
+                        <i class="fa fa-phone" style="width:30px"></i> Phone: +438 483 5596<br>
+                        <i class="fa fa-envelope" style="width:30px"> </i> Email: dinugherciu.cad@mail.com<br>
+                    </div>
+                    <div class="w3-col m6">
+                        <form action="/action_page.php" target="_blank">
+                            <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                                <div class="w3-half">
+                                    <input class="w3-input w3-border" type="text" placeholder="Name" required
+                                        name="Name">
+                                </div>
+                                <div class="w3-half">
+                                    <input class="w3-input w3-border" type="text" placeholder="Email" required
+                                        name="Email">
+                                </div>
+                            </div>
+                            <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+                            <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+ <% include partials/footer.ejs %>
