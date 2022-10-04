@@ -1,1 +1,1 @@
-It is a simple READ.ME that will include all the necessary information and instructions for the "COMP_229_A01" project.
+"COMP_229_A01" project.
