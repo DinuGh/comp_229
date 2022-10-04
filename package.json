@@ -1,28 +1,7 @@
 {
   "name": "comp_229_a01",
   "version": "1.0.0",
-  "description": "COMP_229_A01 project.",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DinuGh/comp_229_a01.git"
-  },
-  "keywords": [
-    "COMP229",
-    "MEAN",
-    "Web",
-    "App",
-    "JavaScript"
-  ],
-  "author": "Dinu Gherciu",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/DinuGh/comp_229_a01/issues"
-  },
-  "homepage": "https://github.com/DinuGh/comp_229_a01#readme",
-  "scripts": {
-    "start": "node ./bin/www",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.2.0",
     "bootstrap": "^5.2.1",
@@ -32,5 +11,23 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DinuGh/comp_229_a01.git"
+  },
+  "keywords": [
+    "Node",
+    "express"
+  ],
+  "author": "Dinu Gherciu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DinuGh/comp_229_a01/issues"
+  },
+  "homepage": "https://github.com/DinuGh/comp_229_a01#readme"
 }
