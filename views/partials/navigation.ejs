@@ -4,9 +4,7 @@
 <html lang="en">
 
 <head>
-    <title>
-        <%= title %>
-    </title>
+    <title><%= title %></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -34,32 +32,37 @@
                 </a>
             </a>
             <% if (title=="Home" ){ %>
-                <a class="nav-item active">
+                <a class="nav-item active"><i class="fa-duotone fa-house"></i>
                     <% } else { %>
-                        <a class="nav-item">
+                        <a class="nav-item"><i class="fa-duotone fa-house"></i>
                             <% } %>
-                                <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Home</a>
+                                <a href="/" class="w3-bar-item w3-button w3-hover-blue-grey w3-padding-large w3-hide-small">
+                                    <i class="fa fa-home"></i>  &nbsp;  Home</a>
             <% if (title=="About Me" ){ %>
                 <a class="nav-item active">
                     <% } else { %>
                         <a class="nav-item">
                             <% } %>
-                                <a href="/about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About Me</a>
+                                <a href="/about" class="w3-bar-item w3-button w3-hover-blue-violet w3-padding-large w3-hide-small">
+                                    <i class="fa fa-address-card"></i>  &nbsp;   About Me</a>
             <% if (title=="Projects" ){ %>
                 <a class="nav-item active">
                     <% } else { %>
                         <a class="nav-item">
                             <% } %>
-                                <a href="/projects" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Projects</a>
+                                <a href="/projects" class="w3-bar-item w3-button w3-hover-teal w3-padding-large w3-hide-small">
+                                    <i class="fa fa-share-alt"></i>  &nbsp;  Projects</a>
             <% if (title=="Services" ){ %>
                 <a class="nav-item active">
                     <% } else { %>
                         <a class="nav-item">
                             <% } %>
-                                <a href="/services" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Services</a>
+                                <a href="/services" class="w3-bar-item w3-button w3-hover-dark-grey w3-padding-large w3-hide-small">
+                                    <i class="fa fa-cogs"></i>  &nbsp;  Services</a>
             <% if (title=="Contacts" ){ %>
                 <a class="nav-item active">
                     <% } else { %>
                         <a class="nav-item">
                             <% } %>
-                                <a href="/contacts" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contacts</a>
+                                <a href="/contacts" class="w3-bar-item w3-button w3-hover-brown w3-padding-large w3-hide-small">
+                                    <i class="fa fa-address-book"></i>  &nbsp;  Contacts</a>
