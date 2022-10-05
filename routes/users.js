@@ -3,23 +3,24 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.send('Home');
 });
 
-router.get('/dinu', function(req, res, next) {
-  res.send('Welcome Dinu!');
+router.get('/projects', function(req, res, next) {
+  res.send('Projects');
 });
 
+router.get('/services', function(req, res, next) {
+  res.send('Services');
+});
 
-// /* GET users listing. */
-// router.get('/', function(req, res, next) {
-//   res.send('respond with a resource');
-// });
+router.get('/about', function(req, res, next) {
+  res.send('About Me');
+});
 
-// router.get('/me', function(req, res, next) {
-//   res.send('Welcome Julio!');
-// });
-
+router.get('/contacts', function(req, res, next) {
+  res.send('Contacts');
+});
 
 
 module.exports = router;
