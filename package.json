@@ -1,20 +1,29 @@
 {
   "name": "comp_229_a01",
   "version": "1.0.0",
-  "description": "",
+  "description": "\"COMP_229_A01\" project.",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.2.0",
-    "bootstrap": "^5.2.1",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^5.1.1",
+    "compression": "^1.7.4",
+    "connect-flash": "^0.1.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
-    "ejs": "~2.6.1",
+    "ejs": "^3.1.8",
     "express": "~4.16.1",
+    "express-session": "^1.17.2",
     "http-errors": "~1.6.3",
-    "morgan": "~1.9.1"
+    "jquery": "^3.6.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.0.8",
+    "morgan": "~1.9.1",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./bin/www"
+    "start": "node ./server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -29,5 +38,7 @@
   "bugs": {
     "url": "https://github.com/DinuGh/comp_229_a01/issues"
   },
-  "homepage": "https://github.com/DinuGh/comp_229_a01#readme"
+  "homepage": "https://github.com/DinuGh/comp_229_a01#readme",
+  "main": "server.js",
+  "devDependencies": {}
 }

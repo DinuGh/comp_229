@@ -1,17 +1,22 @@
-#!/usr/bin/env node
+/*-- Assignment 2 Web Application Development COMP229 
+          Dinu Gherciu, ID: 301268678, Fall 2022*/
+
 
 /**
  * Module dependencies.
  */
 
- var app = require('../app');
- var debug = require('debug')('comp229.018.a01:server');
+ var dbConfig = require('./config/db');
+ var app = require('./config/app');
+ var debug = require('debug')('comp_229_a01:server');
  var http = require('http');
+ const configurePassport = require('./config/passport');
  
  /**
   * Get port from environment and store in Express.
   */
  
+ var db = dbConfig();
  var port = normalizePort(process.env.PORT || '3000');
  app.set('port', port);
  
@@ -25,6 +30,7 @@
   * Listen on provided port, on all network interfaces.
   */
  
+ const passport = configurePassport();
  server.listen(port);
  server.on('error', onError);
  server.on('listening', onListening);
@@ -87,5 +93,5 @@
      ? 'pipe ' + addr
      : 'port ' + addr.port;
    debug('Listening on ' + bind);
-   console.log(`The app is listening on http://localhost:${port}`)
+   console.log(`App listening on  http://localhost:${port}`)
  }

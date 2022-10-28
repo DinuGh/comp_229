@@ -1,26 +1,25 @@
-var express = require('express');
-var router = express.Router();
+/*-- Assignment 2 Web Application Development COMP229 
+          Dinu Gherciu, ID: 301268678, Fall 2022*/
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('Home');
-});
+let express = require('express');
+let router = express.Router();
+let usersController = require('../controllers/user');
+let passport = require('passport');
 
-router.get('/projects', function(req, res, next) {
-  res.send('Projects');
-});
 
-router.get('/services', function(req, res, next) {
-  res.send('Services');
-});
+/* GET Route for displaying the Sign Up page */
+router.get('/signup', usersController.renderSignup);
 
-router.get('/about', function(req, res, next) {
-  res.send('About Me');
-});
+/* POST Route for processing the Sign Up page */
+router.post('/signup', usersController.signup);
 
-router.get('/contacts', function(req, res, next) {
-  res.send('Contacts');
-});
+/* GET Route for displaying the Login page */
+router.get('/login', usersController.renderLogin);
 
+/* POST Route for processing the Login page */
+router.post('/login', usersController.login);
+
+/* GET to perform Signout */
+router.get('/signout', usersController.signout);
 
 module.exports = router;
