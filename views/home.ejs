@@ -1,17 +1,18 @@
-<% include partials/header.ejs %>
+<%- include('partials/header'); %>
 
   <!-- Main Nav  -->
     <div class="w3-half w3-black w3-container w3-center" style="height:100vh; width:50%">
-      <div class="w3-padding-32">
+      <div class="w3-padding-8">
         <!-- Brand/logo -->
         <h1><a href="/">
             <img src="/images/image_logo.png" alt="logo" style="width:200px;height:200px;" title="qa logo" />
           </a>
         </h1>
-        <h2 style="font-family: 'Times New Roman', serif;">Hi, I'm <%= name %> and I like to DESTROY
+        <h2 style="font-family: 'Times New Roman', serif;">Welcome <%= username %>! I'm Dinu and I like to DESTROY
         </h2>
-        <h5 style="font-family: 'Times New Roman', serif;">but I also love creating</h5>
+        <h5 style="font-family: 'Times New Roman', serif;">...but, I also love creating</h5>
       </div>
+      <div> &nbsp;</div>
       <div class="w3-padding-31">
         <% if (title=="Home" ){ %>
           <a class="nav-item active">
@@ -41,13 +42,28 @@
                       <% } %>
                           <a href="/services" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">
                             <i class="fa fa-cogs"></i>    Services</a>
-      <% if (title=="Contacts" ){ %>
+      <% if (title=="Contact Me" ){ %>
           <a class="nav-item active">
               <% } else { %>
                   <a class="nav-item">
                       <% } %>
-                          <a href="/contacts" class="w3-button w3-black w3-block w3-hover-brown w3-padding-16">
-                            <i class="fa-solid fa-address-book"></i>    Contacts</a>
+                          <a href="/contact" class="w3-button w3-black w3-block w3-hover-brown w3-padding-16">
+                            <i class="fa-solid fa-address-book"></i>    Contact Me</a>
+      <% if (title=="Business Contacts List" ){ %>
+          <a class="nav-item active">
+              <% } else { %>
+                  <a class="nav-item">
+                      <% } %>
+                          <a href="/contacts/list" class="w3-button w3-black w3-block w3-hover-teal w3-padding-16">
+                            <i class="fa fa-list"></i>    Business Contacts List</a>
+       <% if (typeof username == 'string' && username) { %>
+          <a href="/signout" class="w3-button w3-black w3-block w3-hover-red w3-padding-16" 
+          onclick="return confirm('Are you sure?')">
+            <i class="fa fa-sign-out"></i>    Sign Out (<%= username %>)</a>
+        <% } else { %>
+          <a href="/login" class="w3-button w3-black w3-block w3-hover-green w3-padding-16">
+            <i class="fa fa-user"></i>    Login</a>
+                       <% } %>   
       </div>
     </div>
 

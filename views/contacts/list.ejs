@@ -1,0 +1,51 @@
+<%- include ('../partials/navigation') %>
+
+  <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css">
+
+<!-- <%= ContactsList %> -->
+<div class="w3-padding-64" style="height:100vh; width:100%">
+    <div class="w3-half w3-grey w3-container" style="height:100%; width:100%">
+        <div class="w3-center">
+            <br>
+            <h1><%= title %></h1>
+        <br>
+
+        <div>
+            <a href="/contacts/add" class="btn btn-primary align-self-end" role="button">                
+                <i class="fa-solid fa-square-plus"></i>
+                Add new Contact
+            </a>                
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row-->
+                <tr>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Email</th>
+                    <th class="text-center">Phone</th>
+                    <th class="text-center" colspan="2">Actions</th>
+                </tr>
+
+                <!-- Repeatable Template Row -->
+
+                <% for(let i = 0; i < ContactsList.length; i++) { %>
+                    <tr>
+                        <td class="text-center"><%= ContactsList[i].contactName %></td>
+                        <td class="text-center"><%= ContactsList[i].email %></td>
+                        <td class="text-center"><%= ContactsList[i].phone %></td>
+                        <td class="text-center">
+                            <a href="/contacts/edit/<%= ContactsList[i]._id %>" class="btn btn-primary btn-sm">
+                            <i class="fa fa-pencil"></i></a>
+                        </td>
+                        <td class="text-center">
+                            <a href="/contacts/delete/<%= ContactsList[i]._id %>" class="btn btn-danger btn-sm">
+                            <i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+    </div>
+<%- include ('../partials/footer') %>

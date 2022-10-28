@@ -9,16 +9,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.bundle.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/authbutton.css">
+    <link rel="stylesheet" href="/stylesheets/navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body {
-            font-family: "Lato", sans-serif
-        }
 
-        .mySlides {
-            display: none
-        }
-    </style>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
 </head>
 
 <body>
@@ -59,10 +72,38 @@
                             <% } %>
                                 <a href="/services" class="w3-bar-item w3-button w3-hover-dark-grey w3-padding-large w3-hide-small">
                                     <i class="fa fa-cogs"></i>  &nbsp;  Services</a>
-            <% if (title=="Contacts" ){ %>
+            <% if (title=="Contact Me" ){ %>
                 <a class="nav-item active">
                     <% } else { %>
                         <a class="nav-item">
                             <% } %>
-                                <a href="/contacts" class="w3-bar-item w3-button w3-hover-brown w3-padding-large w3-hide-small">
-                                    <i class="fa fa-address-book"></i>  &nbsp;  Contacts</a>
+                                <a href="/contact" class="w3-bar-item w3-button w3-hover-brown w3-padding-large w3-hide-small">
+                                    <i class="fa fa-address-book"></i>  &nbsp;  Contact Me</a>
+ 
+                                    <div class="dropdown">
+    <button class="dropbtn " onclick="myFunction()">
+        <i class="fa fa-list"></i>  &nbsp;  Business Contacts List
+    </button>
+        <div class="dropdown-content" id="myDropdown">
+            <a href="/contacts/add">Add Contact</a>
+            <a href="/contacts/list">View Contact List</a>
+        </div>
+    </div> 
+
+        <% if (typeof username == 'string' && username) { %>
+          <a href="/signout" class="w3-bar-item w3-button w3-hover-red w3-padding-large w3-hide-small" 
+          onclick="return confirm('Are you sure?')">
+            <i class="fa fa-sign-out"></i>  &nbsp;  Sign Out (<%= username %>)</a>
+        <% } else { %>
+          <a href="/login" class="w3-bar-item w3-button w3-hover-green w3-padding-large w3-hide-small">
+            <i class="fa fa-user"></i>  &nbsp;  Login</a>
+        <% } %>            
+ 
+<!--     
+            <% if (title=="Users" ){ %>
+                <a class="nav-item active">
+                    <% } else { %>
+                        <a class="nav-item">
+                            <% } %>
+                                <a href="/users" class="w3-bar-item w3-button w3-hover-brown w3-padding-large w3-hide-small">
+                                    <i class="fa fa-user"></i>  &nbsp;  User</a> -->

@@ -1,26 +1,15 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
+let usersController = require('../controllers/user');
+let passport = require('passport');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('Home');
-});
 
-router.get('/projects', function(req, res, next) {
-  res.send('Projects');
-});
+router.get('/signup', usersController.renderSignup);
+router.post('/signup', usersController.signup);
 
-router.get('/services', function(req, res, next) {
-  res.send('Services');
-});
+router.get('/login', usersController.renderLogin);
+router.post('/login', usersController.login);
 
-router.get('/about', function(req, res, next) {
-  res.send('About Me');
-});
-
-router.get('/contacts', function(req, res, next) {
-  res.send('Contacts');
-});
-
+router.get('/signout', usersController.signout);
 
 module.exports = router;
