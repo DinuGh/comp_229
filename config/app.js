@@ -1,3 +1,7 @@
+/*-- Assignment 2 Web Application Development COMP229 
+          Dinu Gherciu, ID: 301268678, Fall 2022*/
+
+// install 3rd party packages
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -6,10 +10,13 @@ var logger = require('morgan');
 let compress = require('compression');
 let bodyParser = require('body-parser');
 let methodOverride = require('method-override');
-let session = require('express-session');
-let flash = require('connect-flash');
-let passport = require('passport');
 
+// modules for authentication
+let session = require('express-session');
+let passport = require('passport');
+let flash = require('connect-flash');
+
+// routes
 var indexRouter = require('../routes/index');
 var usersRouter = require('../routes/users');
 var contactsRouter = require('../routes/contacts');

@@ -1,3 +1,6 @@
+/*-- Assignment 2 Web Application Development COMP229 
+          Dinu Gherciu, ID: 301268678, Fall 2022*/
+
 // create a reference to the model
 let ContactsModel = require('../models/contacts');
 
@@ -16,8 +19,8 @@ module.exports.contactsList = function(req, res, next) {
             });          
         }
     })
-    .sort({contactName: "asc"});
     // orders the contact names in ascending order alphanumerically
+    .sort({contactName: "asc"});
 };
 
 module.exports.displayEditPage = (req, res, next) => {

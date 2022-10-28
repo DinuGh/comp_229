@@ -1,3 +1,6 @@
+/*-- Assignment 2 Web Application Development COMP229 
+          Dinu Gherciu, ID: 301268678, Fall 2022*/
+
 let User = require('../models/user');
 let passport = require('passport');
 
@@ -23,6 +26,7 @@ function getErrorMessage(err) {
   return message;
 };
 
+// check if the user is not already logged in
 module.exports.renderLogin = function(req, res, next) {
   if (!req.user) {
     res.render('auth/login', {
@@ -55,6 +59,7 @@ module.exports.renderSignup = function(req, res, next) {
 };
 
 module.exports.signup = function(req, res, next) {
+  
   if (!req.user && req.body.password === req.body.password_confirm) {
     console.log(req.body);
 
